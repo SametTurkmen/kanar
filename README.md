@@ -1,3 +1,11 @@
+1.	Doğrulama kodu static olarak belirlenmiştir (Kod:6666).
+2.	Doğrulama kodu doğru olması durumunda gerekli stiller gösterildikten sonra todolist sayfasına yönlendirme yapılmaktadır (Router).
+3.	Doğrulama kodu yanlış olması durumunda gerekli stiller gösterilmiştir.
+4.	120 sn. süre bitene kadar resend butonu disabled olarak ayarlanmıştır. Süre sonunda proceed butonu disabled olacaktır.
+5.	Todolist sayfasına doğrudan url’den geçiş sağlanmaması için doğrulama sayfasına yönlendirilmiştir.
+6.	Todolar proje içerisinde todos/todos.json içerisinde tutulmaktadır (json-server –watch todos.json).
+7.	Todoların tamamen silinmesi veya servise erişilememesi gibi durumlar için todolistin boş olduğunu gösteren uyarı table üzerinde gösterilmiştir.
+
 # Kanar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
