@@ -1,0 +1,52 @@
+.todolist {
+    margin: 10% auto;
+    width: 371px;
+    min-height: 415px;
+    background: #ffffff;
+    border: 1px solid #e3e8ed;
+    border-radius: 10px;
+    font-size: 11px;
+    box-shadow: 0px 0px 20px -5px rgba(65, 76, 102, 0.25);
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        tbody {
+            position: relative;
+            .notodo-img {
+                position: absolute;
+                top: 120px;
+                left: 40%;
+            }
+            .notodo-desc {
+                position: absolute;
+                top: 200px;
+                left: 15%;
+                margin-top: 12px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: -0.02em;
+                color: #8692a6;
+            }
+        }
+
+        tr {
+            th {
+                font-weight: 400;
+            }
+            td:first-child,
+            th:first-child {
+                padding-left: 28px;
+                min-width: 150px;
+            }
+
+            button {
+                padding-right: 0;
+                background: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<div class="row verify-page">
+    <div class="col-6 verify">
+
+        <div class="logo">
+            <img src="../../assets/images/logo.png" alt="">
+        </div>
+        <div class="content">
+            <h6>VERIFY EMAIL</h6>
+            <p class="description">We’ve sent a verification code to your email.</p>
+            <p class="address">Address: <span id="mail">johndoe@example.com</span></p>
+        </div>
+
+        <div class="verify-codes ">
+            <input id="first-input" #digitOne type="number" maxlength="1" (keyup)="onDigitInput($event)" />
+            <input id="second-input" #digitTwo type="number" maxlength="1" (keyup)="onDigitInput($event)" />
+            <input id="third-input" #digitThird type="number" maxlength="1" (keyup)="onDigitInput($event)" />
+            <input id="fourth-input" #digitFourth type="number" maxlength="1" (keyup)="onDigitInput($event)" />
+        </div>
+        <div class="timer">
+            <countdown #cd (event)="handleEvent($event)" [config]="{ leftTime: 120, format: 'm:s' }"></countdown>
+        </div>
+
+        <div class="verify-btn">
+            <a [ngClass]="{'disabled':isProceedDisabled}"
+                (click)="checkCode(digitOne.value+digitTwo.value+digitThird.value+digitFourth.value)"> Proceed <i
+                    class="fa fa-angle-right"></i></a>
+        </div>
+
+        <div class="repeat-send-mail">
+            Didn’t receive email ?
+            <button id="resendBtn" [ngClass]="{'disabled':isDisabled}" (click)="cd.restart()" href="#">Resend</button>
+        </div>
+    </div>
+    <div class="col-6 slider">
+        <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide>
+                <div>
+                    <img [src]="images[0]" alt="Random first slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div>
+                    <img [src]="images[1]" alt="Random second slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div>
+                    <img [src]="images[2]" alt="Random third slide">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
